@@ -64,15 +64,34 @@
     
                     <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
                 </figure>
-            </section>
+            </section> 
             <section>
                 <h2>
                     Cat form
                 </h2>
-                <form>
+                <!-- The action attribute indicates where form data should be sent. For example, <form action="/submit-url"></form> tells the browser that the form data should be sent to the path /submit-url. -->
+                <form action="https://freecatphotoapp.com/submit-cat-photo">
+                    <!-- You can use radio buttons for questions where you want only one answer out of multiple options.
                     
+                    label elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers). For example, <label><input type="radio"> cat</label> makes it so clicking the word cat also selects the corresponding radio button.    <!-- Here is an example of a radio button with the option of cat: <input type="radio"> cat. Remember that input elements are self-closing. --> 
+                    <label><input id="indoor" type="radio"> Indoor</label>
+                    <label><input id="outdoor" type="radio"/> Outdoor</label>
+                    
+                    <!-- The input element allows you several ways to collect data from a web form. Like img elements, input elements are self-closing and do not need closing tags. -->
+                    <!-- here are many kinds of inputs you can create using the type attribute. You can easily create a password field, reset button, or a control to let users select a file from their computer. -->
+                    <!-- aceholder ext is used to give people a hint about what kind of information to enter into an input. For example, <input type="text" placeholder="Email address">. -->
+                    <!-- The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page. -->
+
+                    <input id=indoor"" type="text" name=catPhotoUrl" placeholder="Cat Photo Url" required />
+
+                    <!-- Use the button element to create a clickable button. For example, <button>Click Here</button> creates a button with the text Click Here. -->
+                    <!-- Even though you added your button below the text input, they appear next to each other on the page. That's because both input and button elements are inline elements, which don't appear on new lines.
+                        The button you added will submit the form by default. However, relying on default behavior may cause confusion. Add the type attribute with the value submit to the button to make it clear that it is a submit button. -->
+                    <button type="submit">
+                       Submit
+                    </button>
                 </form>
             </section>
         </main>
     </body>
-</html>
+</html> 
