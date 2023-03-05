@@ -1,4 +1,17 @@
-<html>
+<!-- All pages should begin with <!DOCTYPE html>. This special string is known as a declaration and ensures the browser tries to meet industry-wide specifications. -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- Notice that the entire contents of the page are nested within an html element. All other elements must be descendants of this html element -->
+
+    <head>
+        <!-- <!-- You can set browser behavior by adding self-closing meta elements in the head. Here's an example: -->
+
+        <meta charset="UTF-8">
+        <!-- Tell the browser to parse the markup into multiple languages by creating a meta element as a child of the head element. Set its charset attribute to UTF-8. --> 
+
+        <title> Free Code Camp - CatPhotoApp</title>
+    </head>
+    <!-- Notice that everything you've added to the page so far is inside the body element. All page content elements that should be rendered to the page go inside the body element. However, other important information goes inside the head element. -->
     <body>
         <!-- This is called nesting. -> HTML5 has some elements that identify different content areas. These elements make your HTML easier to read and help with Search Engine Optimization (SEO) and accessibility. -->
         <main>
@@ -73,16 +86,44 @@
                 <form action="https://freecatphotoapp.com/submit-cat-photo">
                     <!-- You can use radio buttons for questions where you want only one answer out of multiple options.
                     
-                    label elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers). For example, <label><input type="radio"> cat</label> makes it so clicking the word cat also selects the corresponding radio button.    <!-- Here is an example of a radio button with the option of cat: <input type="radio"> cat. Remember that input elements are self-closing. --> 
-                    <label><input id="indoor" type="radio"> Indoor</label>
-                    <label><input id="outdoor" type="radio"/> Outdoor</label>
-                    
+                    <!-- The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line. -->
+
+                    <fieldset>
+                        <!-- The legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form. -->
+                        <legend>Is your cat an indoor or outdoor cat?</legend>
+
+
+                        <!-- label elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers). For example, <label><input type="radio"> cat</label> makes it so clicking the word cat also selects the corresponding radio button.    Here is an example of a radio button with the option of cat: <input type="radio"> cat. Remember that input elements are self-closing.  -->
+                        <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+                        <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <legend>What's your cat's personality?</legend>
+
+                        <!-- Forms commonly use checkboxes for questions that may have more than one answer.  -->
+                        <!-- There's another way to associate an input element's text with the element itself. You can nest the text within a label element and add a for attribute with the same value as the input element's id attribute. -->
+                        <!-- Like radio buttons, form data for selected checkboxes are name / value attribute pairs. While the value attribute is optional, it's best practice to include it with any checkboxes or radio buttons on the page. -->
+                        <!-- In order to make a checkbox checked or radio button selected by default, you need to add the checked attribute to it. There's no need to set a value to the checked attribute. Instead, just add the word checked to the input element, making sure there is space between it and other attributes. -->
+                        <input value="loving" type="checkbox" id="loving" name="personality"> <label for="loving" checked>Loving</label>
+                        <input value="lazy" id="lazy" type="checkbox" name="personality"> <label for="lazy">Lazy</label>
+                        <input value="energetic" id="energetic" type="checkbox" name="personality"> <label for="energetic">Energetic</label>
+                            
+
+                    </fieldset>
+
+
+
                     <!-- The input element allows you several ways to collect data from a web form. Like img elements, input elements are self-closing and do not need closing tags. -->
                     <!-- here are many kinds of inputs you can create using the type attribute. You can easily create a password field, reset button, or a control to let users select a file from their computer. -->
                     <!-- aceholder ext is used to give people a hint about what kind of information to enter into an input. For example, <input type="text" placeholder="Email address">. -->
                     <!-- The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page. -->
 
-                    <input id=indoor"" type="text" name=catPhotoUrl" placeholder="Cat Photo Url" required />
+
+                        <!-- Notice that both radio buttons can be selected at the same time. To make it so selecting one radio button automatically deselects the other, both buttons must have a name attribute with the same value. -->
+                    <!-- If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes. Since your radio buttons do not have a value attribute, the form data will include indoor-outdoor=on, which is not useful when you have multiple buttons. -->
+                    <input id="indoor" type="text" name=catPhotoUrl" placeholder="Cat Photo Url" required name="catform"/>
 
                     <!-- Use the button element to create a clickable button. For example, <button>Click Here</button> creates a button with the text Click Here. -->
                     <!-- Even though you added your button below the text input, they appear next to each other on the page. That's because both input and button elements are inline elements, which don't appear on new lines.
@@ -93,5 +134,8 @@
                 </form>
             </section>
         </main>
+        <footer>
+            <p>No Copyright - <a href="nitinkashyap003.github.com">nitinkashyap003.github.com</a></p>
+        </footer>
     </body>
 </html> 
